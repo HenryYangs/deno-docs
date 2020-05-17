@@ -1,5 +1,3 @@
-## Integrity checking & lock files
+## 完整性检查和lock文件
 
-Deno can store and check module subresource integrity for modules using a small
-JSON file. Use the `--lock=lock.json` to enable and specify lock file checking.
-To update or create a lock use `--lock=lock.json --lock-write`.
+Deno可以使用一个很小的JSON文件来存储并且检查模块子资源完整性。使用`--lock=lock.json`来允许并指定lock文件检查。如果要更新或者新建lock文件，可以使用`--lock=lock.json --lock-write`。
