@@ -1,14 +1,14 @@
-## Permissions
+## 权限
 
-<!-- TODO(lucacasonato): what are permissions -->
+<!-- TODO(lucacasonato): 什么是权限 -->
 
-<!-- TODO(lucacasonato): description of all permissions -->
+<!-- TODO(lucacasonato): 所有权限描述 -->
 
-### Permissions whitelist
+### 权限白名单
 
-Deno also provides permissions whitelist.
+Deno 也提供了权限白名单。
 
-This is an example to restrict file system access by whitelist.
+这是一个通过白名单来限制文件系统访问的例子。
 
 ```shell
 $ deno run --allow-read=/usr https://deno.land/std/examples/cat.ts /etc/passwd
@@ -18,15 +18,15 @@ error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with t
     ...
 ```
 
-You can grant read permission under `/etc` dir
+你可以给`/etc` 路径设置权限。
 
 ```shell
 $ deno run --allow-read=/etc https://deno.land/std/examples/cat.ts /etc/passwd
 ```
 
-`--allow-write` works same as `--allow-read`.
+`--allow-write` 和 `--allow-read`的用法一样。
 
-This is an example to restrict host.
+这是一个限制host 的例子。
 
 ```ts
 const result = await fetch("https://deno.land/");
