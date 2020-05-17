@@ -1,6 +1,6 @@
-## WASM support
+## 支持 WASM
 
-Deno can execute [wasm](https://webassembly.org/) binaries.
+Deno 可执行[wasm](https://webassembly.org/) 二进制文件。
 
 <!-- prettier-ignore-start -->
 ```js
