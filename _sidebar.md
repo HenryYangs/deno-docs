@@ -8,7 +8,7 @@
   * [使用WebAssembly](/getting-started/webassembly)
 * [运行时](/runtime/)
   * [稳定性](/runtime/stability)
-  * [生命周期](/runtime/program-lifecycle)
+  * [程序的生命周期](/runtime/program-lifecycle)
   * [编译API](/runtime/compiler-apis)
   * [支持Web Work](/runtime/workers)
 * [连接至外部代码](/linking-to-external-code/)
