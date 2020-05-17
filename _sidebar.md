@@ -11,7 +11,7 @@
   * [程序的生命周期](/runtime/program-lifecycle)
   * [编译API](/runtime/compiler-apis)
   * [Workers](/runtime/workers)
-* [连接至外部代码](/linking-to-external-code/)
+* [引入外部代码](/linking-to-external-code/)
   * [重载模块](/linking-to-external-code/reloading-modules)
   * [集成检查](/linking-to-external-code/integrity-checking)
   * [代理](/linking-to-external-code/proxies)
