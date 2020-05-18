@@ -25,3 +25,4 @@
   * [打包](/tools/bundler)  
   * [文档生成](/tools/documentation_generator)  
   * [依赖检查](/dependency_inspector)  
+* [嵌入Deno](/embedding-deno/)
