@@ -28,3 +28,4 @@
 * [嵌入Deno](/embedding-deno/)
 * [嵌入Deno](/embedding-deno/)
 * [贡献](/contributing/)
+  * [从源码构建](/contributing/building-from-source.md)
