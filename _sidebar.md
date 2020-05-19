@@ -29,3 +29,4 @@
 * [嵌入Deno](/embedding-deno/)
 * [贡献](/contributing/)
   * [从源码构建](/contributing/building-from-source.md)
+  * [开发工具](/contributing/development-tools)
