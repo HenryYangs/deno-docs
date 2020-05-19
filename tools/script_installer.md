@@ -8,6 +8,7 @@ Deno 提供了`deno install`命令来安装和部署可执行代码。
 
 例子：
 
+
 ```shell
 $ deno install --allow-net --allow-read https://deno.land/std/http/file_server.ts
 [1/1] Compiling https://deno.land/std/http/file_server.ts
@@ -17,6 +18,7 @@ $ deno install --allow-net --allow-read https://deno.land/std/http/file_server.t
 ```
 
 你可以使用 `-n`或`--name`来更改程序的名字：
+
 
 ```shell
   deno install --allow-net --allow-read -n serve https://deno.land/std/http/file_server.ts
@@ -28,6 +30,7 @@ $ deno install --allow-net --allow-read https://deno.land/std/http/file_server.t
 - 如果文件名是类似'main', 'mod', 'index' 或者 'cli' 这样的通用名，并且没有父路径，那么就取父路径的名字。否则的话就取通用名。
 
 要改变安装个根目录，可以使用`--root`：
+
 
 ```shell
 $ deno install --allow-net --allow-read --root /usr/local https://deno.land/std/http/file_server.ts
@@ -57,6 +60,7 @@ $ deno install --allow-net --allow-read https://deno.land/std/http/file_server.t
 
 例如：
 
+
 ```ts
 // https://example.com/awesome/cli.ts
 async function myAwesomeCli(): Promise<void> {
@@ -69,6 +73,7 @@ if (import.meta.main) {
 ```
 
 在你的代码仓库中增加一个安装例子，确保让你用户知道你创建了一个可执行脚本：
+
 
 ```shell
 # Install using deno install

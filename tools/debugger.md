@@ -48,6 +48,7 @@ _仔细观察你会发现每行都有重复的；一行正常一行斜体。前�
 
 让我们在开发者工具中发送一个请求然后检查：
 
+
 ```
 $ curl http://0.0.0.0:4500/
 ```
@@ -64,6 +65,7 @@ VSCode 可以调试 Deno。
 官方支持的插件 - https://github.com/denoland/vscode_deno/issues/12
 
 设置 `launch.json` 配置文件也可以增加调试器：
+
 
 ```json
 {
@@ -85,6 +87,7 @@ VSCode 可以调试 Deno。
 **说明**: 将 `<entry_point>` 替换为真正的脚本名。
 
 这是我们创建一个本地的`server.ts`文件：
+
 
 ```ts
 import { serve } from "https://deno.land/std@v0.50.0/http/server.ts";
@@ -112,3 +115,4 @@ for await (const req of s) {
 
 - 开发者工具控制台中的自动补充会导致Deno 程序退出
 - 分析和内存转储可能会出现异常
+

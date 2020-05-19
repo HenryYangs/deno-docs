@@ -2,6 +2,7 @@
 
 `deno bundle [URL]`会输出一个 包含所有具体输入的依赖的 JavaScript 文件。例如：
 
+
 ```
 > deno bundle https://deno.land/std/examples/colors.ts colors.bundle.js
 Bundling "colors.bundle.js"
@@ -13,11 +14,13 @@ Emitting bundle to "colors.bundle.js"
 
 这个包只能作为Deno 的模块执行：
 
+
 ```
 deno run colors.bundle.js
 ```
 
 输出是一个自包含的ES 模块，命令行主模块提供的任何export 都可用。例如，如果主模块是这样的：
+
 
 ```ts
 export { foo } from "./foo.js";
@@ -26,6 +29,7 @@ export const bar = "bar";
 ```
 
 它可以像这样被import：
+
 
 ```ts
 import { foo, bar } from "./lib.bundle.js";
