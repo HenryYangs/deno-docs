@@ -1,20 +1,19 @@
-## Code formatter
+## 代码格式化
 
-Deno ships with a built in code formatter that auto-formats TypeScript and
-JavaScript code.
+Deno 内置了自动格式化TypeScript 和JavaScript 的代码格式化工具
 
 ```shell
-# format all JS/TS files in the current directory and subdirectories
+# 格式化当前目录及其子目录下的所有 JS/TS 文件
 deno fmt
-# format specific files
+# 格式化具体的文件
 deno fmt myfile1.ts myfile2.ts
-# check if all the JS/TS files in the current directory and subdirectories are formatted
+# 检查当前目录及其子目录下的所有JS/TS 文件是否都被格式化了
 deno fmt --check
-# format stdin and write to stdout
+# 格式化标准输入然后写到标准输出中
 cat file.ts | deno fmt -
 ```
 
-Ignore formatting code by preceding it with a `// deno-fmt-ignore` comment:
+`// deno-fmt-ignore` 注释之后的代码格式化都会被忽略：
 
 <!-- prettier-ignore-start -->
 
@@ -29,5 +28,4 @@ export const identity = [
 
 <!-- prettier-ignore-end -->
 
-Or ignore an entire file by adding a `// deno-fmt-ignore-file` comment at the
-top of the file.
+或者要忽略整个文件的格式化，那么就要在文件顶部加一句注释`// deno-fmt-ignore-file` 。

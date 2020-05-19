@@ -1,7 +1,6 @@
-## Bundling
+## 打包
 
-`deno bundle [URL]` will output a single JavaScript file, which includes all
-dependencies of the specified input. For example:
+`deno bundle [URL]`会输出一个 包含所有具体输入的依赖的 JavaScript 文件。例如：
 
 ```
 > deno bundle https://deno.land/std/examples/colors.ts colors.bundle.js
@@ -10,17 +9,15 @@ Emitting bundle to "colors.bundle.js"
 9.2 kB emitted.
 ```
 
-If you omit the out file, the bundle will be sent to `stdout`.
+如果你省略了输出文件，那么打包就会被输出到标准输出。
 
-The bundle can just be run as any other module in Deno would:
+这个包只能作为Deno 的模块执行：
 
 ```
 deno run colors.bundle.js
 ```
 
-The output is a self contained ES Module, where any exports from the main module
-supplied on the command line will be available. For example, if the main module
-looked something like this:
+输出是一个自包含的ES 模块，命令行主模块提供的任何export 都可用。例如，如果主模块是这样的：
 
 ```ts
 export { foo } from "./foo.js";
@@ -28,20 +25,20 @@ export { foo } from "./foo.js";
 export const bar = "bar";
 ```
 
-It could be imported like this:
+它可以像这样被import：
 
 ```ts
 import { foo, bar } from "./lib.bundle.js";
 ```
 
-Bundles can also be loaded in the web browser. The bundle is a self-contained ES
-module, and so the attribute of `type` must be set to `"module"`. For example:
+打包结果也可以被web 浏览器加载。这个打包结果是一个自包含的ES模块，因此type 属性必须设置为`"module"`。
+例如：
 
 ```html
 <script type="module" src="website.bundle.js"></script>
 ```
 
-Or you could import it into another ES module to consume:
+或者你也可以在其他ES 模块中import 使用：
 
 ```html
 <script type="module">

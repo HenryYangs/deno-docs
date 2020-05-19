@@ -1,12 +1,10 @@
-# Testing
+# 测试
 
-Deno has a built-in test runner that you can use for testing JavaScript or
-TypeScript code.
+Deno 内置了测试JavaScript 和TypeScript 代码的测试运行器。
 
-## Writing tests
+## 写测试
 
-To define a test you need to call `Deno.test` with a name and function to be
-tested:
+你需要调用`Deno.test`的时候带上要测试点的名字和对应的测试函数：
 
 ```ts
 Deno.test("hello world", () => {
@@ -17,8 +15,7 @@ Deno.test("hello world", () => {
 });
 ```
 
-There are some useful assertion utilities at https://deno.land/std/testing to
-make testing easier:
+https://deno.land/std/testing 有一些有用的断言库可以让测试更简单：
 
 ```ts
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
@@ -29,10 +26,9 @@ Deno.test("hello world", () => {
 });
 ```
 
-### Async functions
+### Async 函数
 
-You can also test asynchronous code by passing a test function that returns a
-promise. For this you can use the `async` keyword when defining a function:
+如果测试函数中返回promise可以测试异步代码，这样你可以在定义函数的时候使用 `async` 关键字：
 
 ```ts
 Deno.test("async hello world", async () => {
@@ -49,19 +45,15 @@ Deno.test("async hello world", async () => {
 
 ### Resource and async op sanitizers
 
-Certain actions in Deno create resources in the resource table
-([learn more here](./contributing/architecture.md)). These resources should be
-closed after you are done using them.
 
-For each test definition the test runner checks that all resources created in
-this test have been closed. This is to prevent resource 'leaks'. This is enabled
-by default for all tests, but can be disabled by setting the `sanitizeResources`
-boolean to false in the test definition.
+Deno 的某些行为会在资源表中创建资源([或许更多内容](./contributing/architecture.md))，这些资源在使用完之后必须要关掉。
 
-The same is true for async operation like interacting with the filesystem. The
-test runner checks that each operation you start in the test is completed before
-the end of the test. This is enabled by default for all tests, but can be
-disabled by setting the `sanitizeOps` boolean to false in the test definition.
+测试运行器会检查每个测试定义中创建的所有资源都被关闭。这样做是为了防止资源泄漏。
+所有测试默认开启检查，但可通过设置布尔值`sanitizeResources`为false 来禁用。
+
+
+对于类似文件系统交互的异步操作也是这样的。测试运行器检查测试开始到测试结束前都每个操作都是闭环的。
+所有测试默认开启检查，但可通过设置布尔值`sanitizeOps` 为false 来禁用。
 
 ```ts
 Deno.test({
@@ -74,11 +66,9 @@ Deno.test({
 });
 ```
 
-### Ignoring tests
+### 忽略测试
 
-Sometimes you want to ignore tests based on some sort of condition (for example
-you only want a test to run on Windows). For this you can use the `ignore`
-boolean in the test definition. If it is set to true the test will be skipped.
+有时候你可能需要在某些情况下忽略测试（比如你只想在Windows 下运行测试）。这样你可以在测试定义中设置布尔值`ignore`，为true时忽略。
 
 ```ts
 Deno.test({
@@ -90,16 +80,13 @@ Deno.test({
 });
 ```
 
-## Running tests
+## 运行测试
 
-To run the test, call `deno test` with the file that contains your test
-function:
+运行测试调用 `deno test`带上包含测试函数的文件：
 
 ```shell
 deno test my_test.ts
 ```
 
-You can also omit the file name, in which case all tests in the current
-directory (recursively) that match the glob `{*_,}test.{js,ts,jsx,tsx}` will be
-run. If you pass a directory, all files in the directory that match this glob
-will be run.
+你也可以省略文件名，当前目录及其子目录下的所有`{*_,}test.{js,ts,jsx,tsx}`文件中的测试都会被执行。
+如果你传了一个目录，那么这个目录下的所有匹配`{*_,}test.{js,ts,jsx,tsx}`的文件都会被执行。
