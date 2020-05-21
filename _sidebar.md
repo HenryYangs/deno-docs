@@ -31,3 +31,4 @@
   * [从源码构建](/contributing/building-from-source.md)
   * [开发工具](/contributing/development-tools)
   * [风格指南](/contributing/style-guide)
+  * [架构](/contributing/architecture)
