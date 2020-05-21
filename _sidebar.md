@@ -33,3 +33,4 @@
   * [风格指南](/contributing/style-guide)
   * [架构](/contributing/architecture)
 * [示例](/examples/)
+  * [Unix Cat程序](/examples/unix-cat)
