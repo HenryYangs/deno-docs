@@ -1,7 +1,6 @@
-## Testing if current file is the main program
+## 检测当前文件是否是主程序
 
-To test if the current script has been executed as the main input to the program
-check `import.meta.main`.
+想要检查当前脚本是不是作为主程序执行，只需要检查 `import.meta.main` 。
 
 ```ts
 if (import.meta.main) {
