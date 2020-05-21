@@ -39,3 +39,5 @@
   * [运行子进程](/examples/subprocess)
   * [查看和撤销权限](/examples/permissions)
   * [系统信号](/examples/os-signals)
+  * [系统文件事件](/examples/file-system-events)
+  * [检查文件是否为主程序](/examples/testing-if-main)
