@@ -34,3 +34,4 @@
   * [架构](/contributing/architecture)
 * [示例](/examples/)
   * [Unix Cat程序](/examples/unix-cat)
+  * [文件服务](/examples/file-server)
