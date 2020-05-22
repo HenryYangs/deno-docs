@@ -16,9 +16,8 @@ https://deno.land/std/version.ts
 
 标准库中提供的一些模块使用了不稳定的API。
 
-试试在命令控制台中不使用`--unstable` 的情况下运行一些模块，会出现很多TypeScript 错误，
+试试在命令控制台中不使用 `--unstable` 的情况下运行一些模块，会出现很多TypeScript 错误，
 提示这些API不在 `Deno` 命名空间中：
-
 
 ```typescript
 // main.ts
@@ -44,8 +43,7 @@ TS2339 [ERROR]: Property 'utimeSync' does not exist on type 'typeof Deno'.
     at https://deno.land/std@0.50.0/fs/copy.ts:101:10
 ```
 
-解决方法就是执行的时候加上`--unstable`标识：
-
+解决方法就是执行的时候加上 `--unstable` 标识：
 
 ```shell
 $ deno run --allow-read --allow-write --unstable main.ts
@@ -54,4 +52,3 @@ $ deno run --allow-read --allow-write --unstable main.ts
 确保产生错误的API 是不稳定版，参见：[`lib.deno.unstable.d.ts`](https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts)中的声明。
 
 这个问题在不久的将来就能够被解决的。
-

@@ -5,7 +5,7 @@
 
 Deno支持[引入maps](https://github.com/WICG/import-maps).
 
-可以使用`--importmap=<FILE>`这个脚手架标识来引入map。
+可以使用 `--importmap=<FILE>` 这个脚手架标识来引入map。
 
 当前的局限性：
 

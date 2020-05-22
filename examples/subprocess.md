@@ -23,7 +23,7 @@ hello
 
 `window.onload` 被指定为一个函数。这个函数在主程序加载后被执行。这和浏览器中的[onload](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)是一样的，而且它可以在主入口文件中使用。
 
-默认情况下，当你使用 `Deno.run()` 时，它是 `stdin`、`stdout` 和 `stderr` 的父进程。如果想和正在运行的子进程通信，可以使用`"piped"`选项。
+默认情况下，当你使用 `Deno.run()` 时，它是 `stdin` 、`stdout` 和 `stderr` 的父进程。如果想和正在运行的子进程通信，可以使用 `"piped"` 选项。
 
 ```ts
 const fileNames = Deno.args;

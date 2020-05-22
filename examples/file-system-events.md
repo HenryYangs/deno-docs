@@ -1,6 +1,5 @@
 ### 文件系统事件
 
-
 轮询文件系统事件:
 
 ```ts
@@ -17,3 +16,4 @@ for await (const event of watcher) {
 - Linux: inotify
 - macOS: FSEvents
 - Windows: ReadDirectoryChangesW
+- 

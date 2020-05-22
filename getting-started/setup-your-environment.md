@@ -8,7 +8,7 @@
 
 `DENO_DIR` 默认为 `$HOME/.deno` ，但是你可以设置为任何其他的路径，用来控制生成和缓存的源码从什么位置读写。 
 
-`NO_COLOR` 设置后，会关掉标准输出的颜色。参见 https://no-color.org/ 。用户可以在不使用`--allow-env`的情况下使用布尔常量`Deno.noColor`测试环境变量是否设置了`NO_COLOR` 。
+`NO_COLOR` 设置后，会关掉标准输出的颜色。参见 https://no-color.org/ 。用户可以在不使用 `--allow-env` 的情况下使用布尔常量 `Deno.noColor` 测试环境变量是否设置了 `NO_COLOR` 。
 
 ### Shell 自动补充
 
@@ -31,7 +31,7 @@ source /usr/local/etc/bash_completion.d/deno.bash
 
 ### 编辑器 和 IDE
 
-因为Deno 需要使用文件扩展名作为模块引入，并支持http 引入，大多数编辑器和语言服务器当前原生并不支持，发现文件或引入时有不必要的文件扩展名时会报错。 
+因为 Deno 需要使用文件扩展名作为模块引入，并支持 http 引入，大多数编辑器和语言服务器当前原生并不支持，发现文件或引入时有不必要的文件扩展名时会报错。 
 
 社区开发了几个编辑器的插件来解决这些问题：
 

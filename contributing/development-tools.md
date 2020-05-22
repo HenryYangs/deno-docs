@@ -2,7 +2,7 @@
 
 ### 测试
 
-测试 `deno`:
+测试 `deno` :
 
 ```shell
 # Run the whole suite:
@@ -12,7 +12,7 @@ cargo test
 cargo test js_unit_tests
 ```
 
-测试 `std/`:
+测试 `std/` :
 
 ```shell
 cargo test std_tests
@@ -137,8 +137,7 @@ $ deno --v8-flags=--expose-gc,--use-strict
 访问 [链接] 查看我们的性能分析(https://deno.land/benchmarks)
 
 性能分析图表假设
-https://github.com/denoland/benchmark_data/data.json 有
-`BenchmarkData[]`类型，`BenchmarkData` 是这样定义的：
+https://github.com/denoland/benchmark_data/data.json 有 `BenchmarkData[]` 类型，`BenchmarkData` 是这样定义的：
 
 ```ts
 interface ExecTimeData {
