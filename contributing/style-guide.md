@@ -14,7 +14,7 @@
 
 ## 在文件名中使用下划线，不要使用中横线
 
-举个栗子🌰: 使用 `file_server.ts` 而不是 `file-server.ts`.
+举个栗子🌰: 使用 `file_server.ts` 而不是 `file-server.ts` 。
 
 ## 给新的特性添加测试代码
 
@@ -42,22 +42,22 @@ TODO 注释中通常应该包含一个issue或者作者的github用户名的括�
 
 ## Typescript
 
-代码库了TypeScript部分包括 `cli/js` 和标准库 `std`。
+代码库了TypeScript部分包括 `cli/js` 和标准库 `std` 。
 
-### 使用TypeScript而不是JavaScript.
+### 使用TypeScript而不是JavaScript
 
-### 使用术语“module”而不是“library”或“package”.
+### 使用术语“module”而不是“library”或“package”
 
 为了清晰和一致，避免使用术语“library”和“package”。使用“module”表示一个单一的JS或TS文件，也表示一个TS/JS目录的代码。
 
-### 不要使用文件名`index.ts`/`index.js`.
+### 不要使用文件名 `index.ts` / `index.js`
 
 Deno不会特殊处理“index.js”或者“index.ts”。使用这样的文件名，表示它们可以被排除在模块之外，其实它们并不能被排除。这很令人困扰。
 
 如果一个目录下的代码需要一个默认的入口，使用 `mod.ts` 这样的文件名。
 文件名 `mod.ts` 遵循Rust规范，它比 `index.ts` 短，并且不会给人预想它是如何工作的。
 
-### 导出的函数：最多两个变量，剩下的放到options参数中。
+### 导出的函数：最多两个变量，剩下的放到options参数中
 
 当设计函数接口时，请务必遵循以下规则。
 
@@ -75,7 +75,7 @@ Deno不会特殊处理“index.js”或者“index.ts”。使用这样的文件
    其它参数可以是对象，但是它们在运行时必须通过拥有以下任意内容，从而可以和普通对象有所区分：
 
     - 一个可辨识的原型(e.g. `Array`, `Map`, `Date`, `class MyThing`)
-    - 一个常见的symbol属性(e.g. 一个有 `Symbol.iterator` 的迭代器).
+    - 一个常见的symbol属性(e.g. 一个有 `Symbol.iterator` 的迭代器)。
 
    这让API可以向后兼容，即便options的位置发生改变。
 
@@ -160,15 +160,15 @@ export interface PWrite {
 export function pwrite(options: PWrite) {}
 ```
 
-### 最小化依赖；不要搞出循环引入。
+### 最小化依赖；不要搞出循环引入
 
 虽然 `cli/js` 和 `std` 没有外部依赖，但我们还是要非常小心地维护内部依赖，使它们简单并且可维护。更重要的是，千万不要引入循环依赖。
 
-### 如果一个文件名以下划线开头，那么就不要引入了。
+### 如果一个文件名以下划线开头，那么就不要引入了
 
 有时候，可能会出现一种情况，一个内部模块是必须的，但是它的API还没有稳定或者没有准备好被引用。这种情况下，给它们加一个下划线开头。按照约定，只有其所在的目录可以引用它。
 
-### 给导出的内容用JSDoc写文档。
+### 给导出的内容用JSDoc写文档
 
 我们很努力地完善文档。每一个符号都应该有一行文档。
 
@@ -228,11 +228,11 @@ export function foo() {
 
 代码简例不应该再包含注释。它已经在注释中了。如果还需要注释的话，那么这个可能就不是一个好示例了。
 
-### 每个模块都应该有一个测试模块。
+### 每个模块都应该有一个测试模块
 
-每个有公共函数的模块，例如 `foo.ts`，都应该有一个测试模块，例如 `foo_test.ts`。由于不同的上下文，`cli/js` 模块的测试应该在 `cli/js/tests` 中，否则它们的关系应该是兄弟目录。
+每个有公共函数的模块，例如 `foo.ts` ，都应该有一个测试模块，例如 `foo_test.ts` 。由于不同的上下文，`cli/js` 模块的测试应该在 `cli/js/tests` 中，否则它们的关系应该是兄弟目录。
 
-### 单元测试应该十分明确。
+### 单元测试应该十分明确
 
 为了更好地理解测试用例，函数应该有正确的命名，从而能在测试代码中得到提示。举例如下：
 
@@ -273,7 +273,7 @@ export function foo(): string {
 
 ### `std`
 
-#### 不要依赖外部代码。
+#### 不要依赖外部代码
 
 `https://deno.land/std/` 希望能成为所有Deno程序可以依赖的基础库。我们希望向用户保证，这些代码没有包含隐藏的未被reviewed的第三方代码。
 is intended to be baseline functionality that all Deno

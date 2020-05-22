@@ -1,12 +1,12 @@
 ## 第一步
 这篇文章包含几个简单的例子来教你一些 Deno 的基础知识。
 
-这个文档假设你已经具备JavaScript知识，尤其是`async`/`await`知识。 如果你不知道，你需要在尝试Deno 之前到[JavaScript基础](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)这里去学习先。
+这个文档假设你已经具备JavaScript知识，尤其是 `async` / `await` 知识。 如果你不知道，你需要在尝试Deno 之前到[JavaScript基础](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)这里去学习先。
 
 ### Hello World
 Deno 是JavaScript 和 TypeScript 的运行时环境，它致力于使用web 新特性的时候做到web兼容。
 
-由于它的浏览器兼容性，一个简单的`Hello World` 程序和你在浏览器中运行的没有区别。
+由于它的浏览器兼容性，一个简单的 `Hello World` 程序和你在浏览器中运行的没有区别。
 
 ```ts
 console.log("Welcome to Deno 🦕");
@@ -33,10 +33,10 @@ await Deno.stdout.write(body);
 
 让我们一步步看一下这个程序：
 
-1. 获取传给程序的第一个参数并存储在变量`url`中。
+1. 获取传给程序的第一个参数并存储在变量 `url` 中。
 2. 针对这个url 发起请求，等待响应，并将响应结果存到变量 `res` 中。
-3. 用[`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)解析响应体，等待响应结果，并将其转化成 [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)， 然后存储为变量`body`。
-4. 将`body` 内容写到`标准输出`中。
+3. 用[`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)解析响应体，等待响应结果，并将其转化成 [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)， 然后存储为变量 `body` 。
+4. 将 `body` 内容写到 `标准输出` 中。
 
 试试下面的脚本:
 
@@ -54,7 +54,7 @@ deno run --allow-net=example.com https://deno.land/std/examples/curl.ts https://
 ```
 
 ### 读文件
-Deno 也提供一些非web 的API。它们挂在`Deno`全局上。你可以在[doc.deno.land](https://doc.deno.land/https/github.com/denoland/deno/releases/latest/download/lib.deno.d.ts)找到这些API的文档说明。
+Deno 也提供一些非web 的API。它们挂在 `Deno` 全局上。你可以在[doc.deno.land](https://doc.deno.land/https/github.com/denoland/deno/releases/latest/download/lib.deno.d.ts)找到这些API的文档说明。
 
 例如文件系统API 没有web 标准格式，所以Deno 提供了它自己的API。
 
@@ -103,7 +103,7 @@ hello world
 hello world
 ```
 
-如同例子`cat.ts`，这里的`copy()` 函数没有额外的内存拷贝。它从内核中获取包数据，然后直接返回。
+如同例子 `cat.ts` ，这里的 `copy()` 函数没有额外的内存拷贝。它从内核中获取包数据，然后直接返回。
 
 ### 更多示例
-你可以在`示例`一章找到更多示例，比如一个HTTP 文件服务器。
+你可以在 `示例` 一章找到更多示例，比如一个HTTP 文件服务器。

@@ -18,13 +18,13 @@ error: Uncaught PermissionDenied: read access to "/etc/passwd", run again with t
     ...
 ```
 
-你可以给`/etc` 路径设置权限。
+你可以给 `/etc` 路径设置权限。
 
 ```shell
 $ deno run --allow-read=/etc https://deno.land/std/examples/cat.ts /etc/passwd
 ```
 
-`--allow-write` 和 `--allow-read`的用法一样。
+`--allow-write` 和 `--allow-read` 的用法一样。
 
 这是一个限制host 的例子。
 

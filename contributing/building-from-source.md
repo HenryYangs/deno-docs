@@ -1,6 +1,6 @@
 ## 从源码构建
 
-以下内容将讲述如何从源码构建Deno。如果只是想使用Deno，可以下载已构建的可执行版本（更多信息请参考`开始`章节）。
+以下内容将讲述如何从源码构建Deno。如果只是想使用Deno，可以下载已构建的可执行版本（更多信息请参考 `开始` 章节）。
 
 ### 克隆仓库
 
@@ -37,10 +37,10 @@ V8_FROM_SOURCE=1 cargo build -vv
 
 当从源码构建V8时，有几个依赖需要确认：
 
-[Python 2](https://www.python.org/downloads). 确保在 `PATH` 中存在一个没有后缀的`python`/`python.exe`并且指向Python 2,
+[Python 2](https://www.python.org/downloads). 确保在 `PATH` 中存在一个没有后缀的 `python` / `python.exe` 并且指向Python 2,
 [而不是3](https://github.com/denoland/deno/issues/464#issuecomment-411795578).
 
-对于Linux用户，glib-2.0开发文件也必须安装。（在Ubuntu上，执行`apt install libglib2.0-dev`）
+对于Linux用户，glib-2.0开发文件也必须安装。（在Ubuntu上，执行 `apt install libglib2.0-dev` ）
 
 Mac用户必须安装 [XCode](https://developer.apple.com/xcode/) 。
 
@@ -62,7 +62,7 @@ Mac用户必须安装 [XCode](https://developer.apple.com/xcode/) 。
    10" → "Change" → "Change" → 勾选 "Debugging Tools For Windows" → "Change" ->
    "Finish"。 或者使用:
    [Debugging Tools for Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)
-   (注意: 打开链接会下载文件，你必须手动安装`X64 Debuggers And Tools-x64_en-us.msi`)。
+   (注意: 打开链接会下载文件，你必须手动安装 `X64 Debuggers And Tools-x64_en-us.msi` )。
 
 阅读 [rusty_v8的README](https://github.com/denoland/rusty_v8) 以获取更多细节。
 

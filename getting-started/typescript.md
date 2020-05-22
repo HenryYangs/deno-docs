@@ -4,7 +4,7 @@
 
 ### 使用外部类型定义
 
-JavaScript 和 TypeScript在Deno 运行时都可以作为第一语言。这说明，它需要完全合格的模块名，包括扩展名（或提供正确媒体类型的服务器）。另外，Deno 不能解析‘魔术’模块。
+JavaScript 和 TypeScript在Deno 运行时都可以作为第一语言。这说明，它需要完全合格的模块名，包括扩展名（或提供正确媒体类型的服务器）。另外，Deno 不能解析"魔术"模块。
 
 然而开箱即用TypeScript 编译器要依赖没有扩展名的模块和Node.js模块解析逻辑将类型应用到JavaScript 模块。
 
@@ -12,9 +12,8 @@ JavaScript 和 TypeScript在Deno 运行时都可以作为第一语言。这说�
 
 #### 编译提示
 
-
 如果你正在引入一个知道类型定义文件位置的JavaScript 模块，你可以在import 的时候以编译提示的形式指定类型定义。
-编译提示告知 Deno 引入的JavaScript 代码相关的`.d.ts`文件的位置。这个提示是`@deno-types`，指定的值是在编译器中使用的，而不是在JavaScript 模块中使用。例如，你有一个`foo.js`，并且你知道它的类型文件是`foo.d.ts`，那么你的代码就会是这样的：
+编译提示告知 Deno 引入的JavaScript 代码相关的 `.d.ts` 文件的位置。这个提示是 `@deno-types` ，指定的值是在编译器中使用的，而不是在JavaScript 模块中使用。例如，你有一个 `foo.js` ，并且你知道它的类型文件是 `foo.d.ts` ，那么你的代码就会是这样的：
 
 ```ts
 // @deno-types="./foo.d.ts"
@@ -24,7 +23,7 @@ import * as foo from "./foo.js";
 它的值和引入模块的解析逻辑是一样的，意味着文件需要扩展名，并且是相对当前模块的。当然它也支持远程路径。
 
 
-这个提示会影响接下来的`import`语句（或`export ... from`语句），`@deno-types`的值会在编译的时候替换指定的模块。如上面的例子，Deno 编译器会加载 `./foo.d.ts` 而不是 `./foo.js`。但是 Deno 运行程序的时候仍然会加载`./foo.js`。
+这个提示会影响接下来的 `import` 语句（或 `export ... from` 语句），`@deno-types` 的值会在编译的时候替换指定的模块。如上面的例子，Deno 编译器会加载 `./foo.d.ts` 而不是 `./foo.js` 。但是 Deno 运行程序的时候仍然会加载 `./foo.js` 。
 
 #### JS文件中的三斜杠reference指令
 
@@ -36,20 +35,20 @@ import * as foo from "./foo.js";
 export const foo = "foo";
 ```
 
-Deno 能够看到它，尽管运行时的时候会加载`foo.js`，编译器在检查类型的时候会使用`foo.d.ts`。
+Deno 能够看到它，尽管运行时的时候会加载 `foo.js` ，编译器在检查类型的时候会使用 `foo.d.ts` 。
 指令的值的解析逻辑和引入模块的解析逻辑一样，那么它是相对当前文件路径，必须有文件扩展名。当然它也支持远程路径。
 
 #### X-TypeScript-Types 自定义 header
 
 
-如果你正在组织Deno 要使用的模块，你想要通知Deno 他的类型文件的位置，你可以使用一个自定义的HTTP header `X-TypeScript-Types`来告诉Deno 那个文件的位置。
+如果你正在组织Deno 要使用的模块，你想要通知Deno 他的类型文件的位置，你可以使用一个自定义的HTTP header `X-TypeScript-Types` 来告诉Deno 那个文件的位置。
 
 
 这个header 的工作原理和上面提到的三斜杠指令是一样的，它只是意味着JavaScript文件内容本身并不需要修改，类型定义文件的位置可以由服务器本身决定。
 
 **并不是所有的类型定义都是支持的**
 
-Deno 会使用编译器提示来加载指定的`.d.ts`，但是一些`.d.ts`包含不支持的特性。尤其，一些`.d.ts` 使用模块解析逻辑来加载其他包中的类型定义。例如，一个类型包含`node` 的类型引用指令用来解析类似`./node_modules/@types/node/index.d.ts`的路径。由于它依赖非相关的‘魔术’解析，Deno 不支持这种。
+Deno 会使用编译器提示来加载指定的 `.d.ts` ，但是一些 `.d.ts` 包含不支持的特性。尤其，一些 `.d.ts` 使用模块解析逻辑来加载其他包中的类型定义。例如，一个类型包含 `node` 的类型引用指令用来解析类似 `./node_modules/@types/node/index.d.ts` 的路径。由于它依赖非相关的‘魔术’解析，Deno 不支持这种。
 
 **为什么不在TypeScript文件中使用三斜杠类型reference?**
 
