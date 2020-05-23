@@ -34,7 +34,7 @@ cargo test std_tests
 
 ### 性能分析
 
-开始性能分析,
+开始性能分析：
 
 ```sh
 # 确保我们构建的是发布版本
@@ -59,7 +59,7 @@ isolate-0x7fad98242400-v8.log > prof.log
 
 `prof.log` 文件包含了不同调用的分布信息。
 
-如果想使用Web UI查看日志，可以生成一个日志的JSON文件：
+如果想使用 Web UI 查看日志，可以生成一个日志的 JSON 文件：
 
 ```sh
 D8_PATH=target/release/ ./third_party/v8/tools/linux-tick-processor
@@ -82,9 +82,9 @@ isolate-0x7fad98242400-v8.log --preprocess > prof.json
 - [https://v8.dev/docs/d8](https://v8.dev/docs/d8)
 - [https://v8.dev/docs/profile](https://v8.dev/docs/profile)
 
-### 使用LLDB调试
+### 使用 LLDB 调试
 
-我们可以使用LLDB来调试Deno。
+我们可以使用 LLDB 来调试 Deno 。
 
 ```shell
 $ lldb -- target/debug/deno run tests/worker.js
@@ -96,7 +96,7 @@ $ lldb -- target/debug/deno run tests/worker.js
 ```
 
 我们可以使用 `rust-lldb` 来调试Rust代码。
-应该使用 `rustc` 命令，同时，它是LLDB的一个包装器。
+应该使用 `rustc` 命令，同时，它是 LLDB 的一个包装器。
 
 ```shell
 $ rust-lldb -- ./target/debug/deno run --allow-net tests/http_bench.ts
@@ -116,7 +116,7 @@ Current executable set to '../deno/target/debug/deno' (x86_64).
 
 ### V8选项
 
-V8有很多内置的命令行选项。
+V8 有很多内置的命令行选项。
 
 ```shell
 # 列出V8所有的选项
@@ -134,7 +134,7 @@ $ deno --v8-flags=--expose-gc,--use-strict
 
 ### 持续的性能分析
 
-访问 [链接] 查看我们的性能分析(https://deno.land/benchmarks)
+访问 [链接] 查看我们的性能分析 （https://deno.land/benchmarks）
 
 性能分析图表假设
 https://github.com/denoland/benchmark_data/data.json 有 `BenchmarkData[]` 类型，`BenchmarkData` 是这样定义的：

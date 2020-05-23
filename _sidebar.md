@@ -26,7 +26,6 @@
   * [文档生成](/tools/documentation_generator)  
   * [依赖检查](/dependency_inspector)  
 * [嵌入Deno](/embedding-deno/)
-* [嵌入Deno](/embedding-deno/)
 * [贡献](/contributing/)
   * [从源码构建](/contributing/building-from-source.md)
   * [开发工具](/contributing/development-tools)

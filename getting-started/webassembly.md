@@ -1,6 +1,6 @@
 ## 支持 WASM
 
-Deno 可执行[wasm](https://webassembly.org/) 二进制文件。
+Deno 可执行 [wasm](https://webassembly.org/) 二进制文件。
 
 <!-- prettier-ignore-start -->
 ```js
