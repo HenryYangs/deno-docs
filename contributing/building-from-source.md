@@ -1,16 +1,16 @@
 ## 从源码构建
 
-以下内容将讲述如何从源码构建Deno。如果只是想使用Deno，可以下载已构建的可执行版本（更多信息请参考 `开始` 章节）。
+以下内容将讲述如何从源码构建 Deno 。如果只是想使用 Deno ，可以下载已构建的可执行版本（更多信息请参考 `开始` 章节）。
 
 ### 克隆仓库
 
-在Linux或Mac上克隆：
+在 Linux 或 Mac 上克隆：
 
 ```shell
 git clone --recurse-submodules https://github.com/denoland/deno.git
 ```
 
-Windows用户需要多几个步骤：
+Windows 用户需要多几个步骤：
 
 1. [开启开发者模式](https://www.google.com/search?q=windows+enable+developer+mode)
    (否则软链接时会要求管理员权限)。
@@ -23,28 +23,28 @@ Windows用户需要多几个步骤：
 
 ### 预备知识
 
-构建Deno最简单的方式是使用一个预编译的V8版本：
+构建 Deno 最简单的方式是使用一个预编译的 V8 版本：
 
 ```
 cargo build -vv
 ```
 
-但是，如果想从源码构建Deno和V8：
+但是，如果想从源码构建 Deno 和 V8 ：
 
 ```
 V8_FROM_SOURCE=1 cargo build -vv
 ```
 
-当从源码构建V8时，有几个依赖需要确认：
+当从源码构建 V8 时，有几个依赖需要确认：
 
-[Python 2](https://www.python.org/downloads). 确保在 `PATH` 中存在一个没有后缀的 `python` / `python.exe` 并且指向Python 2,
-[而不是3](https://github.com/denoland/deno/issues/464#issuecomment-411795578).
+[Python 2](https://www.python.org/downloads) 。 确保在 `PATH` 中存在一个没有后缀的 `python` / `python.exe` 并且指向 Python 2 ,
+[而不是3](https://github.com/denoland/deno/issues/464#issuecomment-411795578) 。
 
-对于Linux用户，glib-2.0开发文件也必须安装。（在Ubuntu上，执行 `apt install libglib2.0-dev` ）
+对于 Linux 用户，glib-2.0 开发文件也必须安装。（在 Ubuntu 上，执行 `apt install libglib2.0-dev` ）
 
-Mac用户必须安装 [XCode](https://developer.apple.com/xcode/) 。
+Mac 用户必须安装 [XCode](https://developer.apple.com/xcode/) 。
 
-对Windows用户而言：
+对 Windows 用户而言：
 
 1. 下载带有"Desktop development with C++"工具的 [VS Community 2019](https://www.visualstudio.com/downloads/) 
    并且确保选择了以下这些工具：
@@ -57,7 +57,7 @@ Mac用户必须安装 [XCode](https://developer.apple.com/xcode/) 。
    - C++/CLI support
    - VC++ 2015.3 v14.00 (v140) toolset for desktop
 
-2. 启用 "Debugging Tools for Windows". 打开 "Control Panel" → "Programs" →
+2. 启用 "Debugging Tools for Windows"。 打开 "Control Panel" → "Programs" →
    "Programs and Features" → 选择 "Windows Software Development Kit - Windows
    10" → "Change" → "Change" → 勾选 "Debugging Tools For Windows" → "Change" ->
    "Finish"。 或者使用:

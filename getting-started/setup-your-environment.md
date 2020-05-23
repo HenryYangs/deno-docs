@@ -1,6 +1,6 @@
 ## 设置环境
 
-为了高效使用Deno，你要设置你的环境：shell 自动补充，环境变量，你选择的编辑器和IDE。
+为了高效使用 Deno，你要设置你的环境：shell 自动补充，环境变量，你选择的编辑器和IDE。
 
 ### 环境变量
 
@@ -12,7 +12,7 @@
 
 ### Shell 自动补充
 
-你可以使用命令行 `deno completions <shell>` 来生成完整的shell脚本。这个命令输出到标准输出，你应该将其重定向到适当的文件中。 
+你可以使用命令行 `deno completions <shell>` 来生成完整的 shell 脚本。这个命令输出到标准输出，你应该将其重定向到适当的文件中。 
 
 支持的shell 包括：
 
@@ -43,4 +43,4 @@ source /usr/local/etc/bash_completion.d/deno.bash
 - https://youtrack.jetbrains.com/issue/WEB-42983
 - https://youtrack.jetbrains.com/issue/WEB-31667
 
-如果这份清单中没有你最爱的IDE，或许你可以开发一个插件。我们的[社区不和谐群体](https://discord.gg/TGMHGv6) 可以给你一些启发。
+如果这份清单中没有你最爱的IDE，或许你可以开发一个插件。我们的 [社区不和谐群体](https://discord.gg/TGMHGv6) 可以给你一些启发。

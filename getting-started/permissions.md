@@ -26,7 +26,7 @@ $ deno run --allow-read=/etc https://deno.land/std/examples/cat.ts /etc/passwd
 
 `--allow-write` 和 `--allow-read` 的用法一样。
 
-这是一个限制host 的例子。
+这是一个限制 host 的例子。
 
 ```ts
 const result = await fetch("https://deno.land/");
